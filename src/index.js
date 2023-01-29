@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require('mongoose')
 const route = require('./routes/route')
 mongoose.set('strictQuery', false);
+app.use(express.json())
 
 mongoose.connect('mongodb+srv://newdatabase:Gd6tycxuRBETdhM7@ourowncluster.jzinjug.mongodb.net/bonusDevDB', { useNewUrlParser:true})
 .then(()=> console.log("database connected"))
